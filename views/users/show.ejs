@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= user.firstName %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>User</h1>
+
+  <div>
+
+    <span><%= user.firstName %></span>
+    <span><%= user.lastName %></span>
+    <span><%= user.email %></span>
+    <span><%= user.dob %></span>
+
+    <form action="<%='/users/' + user.id + '?_method=DELETE' %>" method="POST">
+      <input type="submit" value="X" />
+    </form>
+
+    <a href="<%= '/users/' + user.id + '/edit' %>">edit</a>
+
+  </div>
+
+
+
+  </body>
+</html>
